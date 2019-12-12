@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-image: url();
+            background-color: #7c7c7c;}
+    </style>
+
+
+</head>
+<!-- 
+design notes:
+need a header to display "Weather Dashboard"
+city search box (possibly input or text area) with search button
+this should also save search history to local storage (listing options below)
+user should be able to select old options (like buttons) to view them in the app (current weather and such)
+
+main body of the page:
+list city name and current date
+followed by:
+- temperature
+- humidity
+- wind speed
+- UV index (with color changing based on how high; green, yellow, red, etc...)
+
+there must also be a 5 day forcast (might change to 7 day, listing the entire week)
+each will be a small container listing:
+- date
+- weather icon (displaying sunny, cloudy, etc...)
+- temperature
+- humidity -->
+
+
+<body onLoad="displayTime();">
+
+    <header>
+        <div class="head">
+            <h1> Casey's Weather Dashboard </h1>
+        </div>
+    </header>
+
+    <!-- this container will give the textbox and search along with history
+    (represented as buttons? or maybe an event listener to detect when one is selected). -->
+    <div class="search-container" id="search-container">
+        <input type="text" id="text-box">
+        <button class="fa fa-search" type="button" id=search-button></button>
+
+        <div id="past-display"></div> <!-- displays past searches -->
+    </div>
+
+    <div class="city-container" id="city-container">
+        <h4 class="temperature-display" id="tempperature-display">Temperature:</h4>
+        <h4 class="humidity-display" id="humidity-display">Humidity:</h4>
+        <h4 class="wind-display" id="wind-display">Wind Speed:</h4>
+        <h4 class="uv-display" id="uv-display">UV Index:</h4>
+    </div>
+
+
+    <!-- this container holds all mini day containers -->
+    <div class="main-day-container" id="main-day-container">
+       <!-- mini containers go here (5) or possibly 7 -->
+
+        <div class="day-container" id="day-1">
+            <input type="date">
+            <h5 class="temp-icon" id="day-1-icon"></h5>
+            <h5 class="temp-display" id="day-1-temp">Temp:</h5>
+            <h5 class="humid-display" id="day-1-humid">Humidity:</h5>
+        </div>
+
+        <div class="day-container" id="day-2">
+            <input type="date">
+            <h5 class="temp-icon" id="day-2-icon"></h5>
+            <h5 class="temp-display" id="day-2-temp">Temp:</h5>
+            <h5 class="humid-display" id="day-2-humid">Humidity:</h5>
+        </div>
+
+        <div class="day-container" id="day-3">
+            <input type="date">
+            <h5 class="temp-icon" id="day-3-icon"></h5>
+            <h5 class="temp-display" id="day-3-temp">Temp:</h5>
+            <h5 class="humid-display" id="day-3-humid">Humidity:</h5>
+        </div>
+
+        <div class="day-container" id="day-4">
+            <input type="date">
+            <h5 class="temp-icon" id="day-4-icon"></h5>
+            <h5 class="temp-display" id="day-4-temp">Temp:</h5>
+            <h5 class="humid-display" id="day-4-humid">Humidity:</h5>
+        </div>
+
+        <div class="day-container" id="day-5">
+            <input type="date">
+            <h5 class="temp-icon" id="day-5-icon"></h5>
+            <h5 class="temp-display" id="day-5-temp">Temp:</h5>
+            <h5 class="humid-display" id="day-5-humid">Humidity:</h5>
+        </div>
+
+    </div>
+
+    <script></script>
+</body>
+</html>
