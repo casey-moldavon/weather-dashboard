@@ -56,6 +56,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 10px;
+    visibility: hidden;
 }
 
 
@@ -71,6 +72,7 @@
     text-align: center;
     font-display: bold;
     font-size: 25px;
+    visibility: hidden;
 }
 
 .temp-icon {
@@ -94,8 +96,5 @@
     margin-left: 20px;
     margin-right: 20px;
     float: left;
-}
-
-#day-1 {
-    /* margin-right: 200px;    */
+    visibility: hidden;
 }

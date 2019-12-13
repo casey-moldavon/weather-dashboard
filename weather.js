@@ -16,13 +16,6 @@ $(document).ready(function(){
     // - temperature
     // - humidity
 
-    var dayOne = document.getElementById("day-1");
-    var dayTwo = document.getElementById("day-2");
-    var dayThree = document.getElementById("day-3");
-    var dayFour = document.getElementById("day-4");
-    var dayFive = document.getElementById("day-5");
-    
-
         // var button = document.querySelector("#search-button");
         // button.addEventListener("click", function(){
 
@@ -75,6 +68,15 @@ $(document).ready(function(){
             });
 
 
+
+    var dayOne = document.getElementById("day-1");
+    var dayTwo = document.getElementById("day-2");
+    var dayThree = document.getElementById("day-3");
+    var dayFour = document.getElementById("day-4");
+    var dayFive = document.getElementById("day-5");
+
+
+
 // ========================= 5-Day Weather Forecast =========================
 
     // var weekQueryURL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + apiKey;\
@@ -87,29 +89,129 @@ $(document).ready(function(){
 
     //     $list.weather.main
     //     console.log(response.list.weather)
-    //     list.weather.main
     //     list.main.temp
     //     list.main.humidity
 
 
+// ========================= Icon conditionals =========================
 
+
+// ------------------------- Day 1 -------------------------
+// if (response.list.weather.main === "Clear") {
+//     $("#day-1-icon").attr("src", images/sunny.png);
+// }
+// if (response.list.weather.main === "Clouds") {
+//     $("#day-1-icon").attr("src", images/partlycloudy.png);
+// }
+// if (response.list.weather.main === "Rain") {
+//     $("#day-1-icon").attr("src", images/rain.png);
+// }
+// if (response.list.weather.main === "Drizzle") {
+//     $("#day-1-icon").attr("src", images/sleet.png);
+// }
+// if (response.list.weather.main === "Snow") {
+//     $("#day-1-icon").attr("src", images/snow.png);
+// }
+// if (response.list.weather.main === "Thunderstorm") {
+//     $("#day-1-icon").attr("src", images/tstorms.png);
+// }
+
+// ------------------------- Day 2 -------------------------
+// if (response.list.weather.main === "Clear") {
+//     $("#day-2-icon").attr("src", images/sunny.png);
+// }
+// if (response.list.weather.main === "Clouds") {
+//     $("#day-2-icon").attr("src", images/partlycloudy.png);
+// }
+// if (response.list.weather.main === "Rain") {
+//     $("#day-2-icon").attr("src", images/rain.png);
+// }
+// if (response.list.weather.main === "Drizzle") {
+//     $("#day-2-icon").attr("src", images/sleet.png);
+// }
+// if (response.list.weather.main === "Snow") {
+//     $("#day-2-icon").attr("src", images/snow.png);
+// }
+// if (response.list.weather.main === "Thunderstorm") {
+//     $("#day-2-icon").attr("src", images/tstorms.png);
+// }
+
+// ------------------------- Day 3 -------------------------
+// if (response.list.weather.main === "Clear") {
+//     $("#day-3-icon").attr("src", images/sunny.png);
+// }
+// if (response.list.weather.main === "Clouds") {
+//     $("#day-3-icon").attr("src", images/partlycloudy.png);
+// }
+// if (response.list.weather.main === "Rain") {
+//     $("#day-3-icon").attr("src", images/rain.png);
+// }
+// if (response.list.weather.main === "Drizzle") {
+//     $("#day-3-icon").attr("src", images/sleet.png);
+// }
+// if (response.list.weather.main === "Snow") {
+//     $("#day-3-icon").attr("src", images/snow.png);
+// }
+// if (response.list.weather.main === "Thunderstorm") {
+//     $("#day-3-icon").attr("src", images/tstorms.png);
+// }
+
+// ------------------------- Day 4 -------------------------
+// if (response.list.weather.main === "Clear") {
+//     $("#day-4-icon").attr("src", images/sunny.png);
+// }
+// if (response.list.weather.main === "Clouds") {
+//     $("#day-4-icon").attr("src", images/partlycloudy.png);
+// }
+// if (response.list.weather.main === "Rain") {
+//     $("#day-4-icon").attr("src", images/rain.png);
+// }
+// if (response.list.weather.main === "Drizzle") {
+//     $("#day-4-icon").attr("src", images/sleet.png);
+// }
+// if (response.list.weather.main === "Snow") {
+//     $("#day-4-icon").attr("src", images/snow.png);
+// }
+// if (response.list.weather.main === "Thunderstorm") {
+//     $("#day-4-icon").attr("src", images/tstorms.png);
+// }
+
+// ------------------------- Day 5 -------------------------
+// if (response.list.weather.main === "Clear") {
+//     $("#day-5-icon").attr("src", images/sunny.png);
+// }
+// if (response.list.weather.main === "Clouds") {
+//     $("#day-5-icon").attr("src", images/partlycloudy.png);
+// }
+// if (response.list.weather.main === "Rain") {
+//     $("#day-5-icon").attr("src", images/rain.png);
+// }
+// if (response.list.weather.main === "Drizzle") {
+//     $("#day-5-icon").attr("src", images/sleet.png);
+// }
+// if (response.list.weather.main === "Snow") {
+//     $("#day-5-icon").attr("src", images/snow.png);
+// }
+// if (response.list.weather.main === "Thunderstorm") {
+//     $("#day-5-icon").attr("src", images/tstorms.png);
+// }
 
 
 // // ========================= UV Index =========================
-//         function findUvIndex() {
-//             // var uvIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon;
-//             // http://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}
-//             var uvIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon;
+//     function findUvIndex() {
+//         // var uvIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon;
+//         // http://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}
+//         var uvIndex = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon;
 
-//             $.ajax({
-//                 url: uvIndex,
-//                 method: "GET"
-//             }).then(function (response) {
-//                 console.log(response)
-//                 $("#uv-display").text("UV Index: " + response.value)
-//             })
-//         };
-//         findUvIndex()        
+//         $.ajax({
+//             url: uvIndex,
+//             method: "GET"
+//         }).then(function (response) {
+//             console.log(response)
+//             $("#uv-display").text("UV Index: " + response.value)
+//         })
+//     };
+//     findUvIndex()        
 
 
 });
