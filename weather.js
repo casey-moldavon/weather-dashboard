@@ -67,15 +67,13 @@ $(document).ready(function(){
                 });
             });
 
-
+            
 
     var dayOne = document.getElementById("day-1");
     var dayTwo = document.getElementById("day-2");
     var dayThree = document.getElementById("day-3");
     var dayFour = document.getElementById("day-4");
     var dayFive = document.getElementById("day-5");
-
-
 
 // ========================= 5-Day Weather Forecast =========================
 
