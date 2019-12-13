@@ -37,25 +37,26 @@ $(document).ready(function() {
                 // var apiKey = "31f4dd752a3e8b29f840df4abf0996cc";
 
 
-                var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
+                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
                 // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "json&APPID=" + apiKey;        
                 // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "json&APPID=" + apiKey;
                 // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "json&appid=" + apiKey;
                 // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey;
                 // var currentQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + apiKey;
                 // var currentQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "us&mode=json&APPID=31f4dd752a3e8b29f840df4abf0996cc";
+                var currentQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&mode=json&APPID=" + apiKey;
     
                 $.ajax({
                     url: currentQueryURL,
                     method: "GET"
                 }).then(function(response){
                     console.log(response);
-                    console.log(queryURL);
+                    console.log(currentQueryURL);
     
-                    var lon = response.coord.lon;
-                    console.log(lon);
-                    var lat = response.coord.lat;
-                    console.log(lat);
+                    // var lon = response.coord.lon;
+                    // console.log(lon);
+                    // var lat = response.coord.lat;
+                    // console.log(lat);
     
                     //this section should change the current text in each display, replacing it with the given string + response
                     $("#temperature-display").text = ("Temperature: " + response.main.temp);
