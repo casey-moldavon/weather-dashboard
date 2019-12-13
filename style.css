@@ -1,0 +1,101 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ------------------------- Heading ------------------------- */
+.head {
+    background-color: rgb(7, 0, 55);
+    color: #8bc6f2;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* ------------------------- Search area ------------------------- */
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+}
+
+.search-container {
+    background-color: #8bc6f2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+}
+
+#city-search {
+    color: black;
+    padding: 5px;
+    font-display: bold;
+}
+
+#search-button {
+    background-color: rgb(7, 0, 55);
+    color: #8bc6f2;
+    border-color: rgb(7, 0, 55);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-display: bold;
+}
+
+/* ------------------------- City Forecast ------------------------- */
+.city-container {
+    background-color: #8bc6f2;
+    color: rgb(7, 0, 55);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+}
+
+
+/* ------------------------- Mini Forecast ------------------------- */
+
+#five-day {
+    background-color: rgb(7, 0, 55);
+    color: #8bc6f2;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-display: bold;
+    font-size: 25px;
+}
+
+.temp-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.day-container {
+    background-color: #8bc6f2;
+    color: rgb(7, 0, 55);
+
+    /* background-color: rgb(7, 0, 55);
+    color: #8bc6f2; */
+
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 42px;
+    width: 170px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+}
+
+#day-1 {
+    /* margin-right: 200px;    */
+}
