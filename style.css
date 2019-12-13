@@ -23,7 +23,7 @@
     margin-bottom: 20px;
     margin-left: 200px;
     margin-right: 200px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .search-container {
@@ -53,10 +53,11 @@
 .city-container {
     background-color: #8bc6f2;
     color: rgb(7, 0, 55);
+    font-size: 25px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 10px;
-    visibility: hidden;
+    display: none;
 }
 
 
@@ -72,12 +73,12 @@
     text-align: center;
     font-display: bold;
     font-size: 25px;
-    visibility: hidden;
+    display: none;
 }
 
 .temp-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .day-container {
@@ -95,6 +96,7 @@
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    font-size: 20px;
     float: left;
-    visibility: hidden;
+    display: none;
 }

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
 
     // main body of the page:
@@ -15,9 +15,6 @@ $(document).ready(function(){
     // - weather icon (displaying sunny, cloudy, etc...)
     // - temperature
     // - humidity
-
-        // var button = document.querySelector("#search-button");
-        // button.addEventListener("click", function(){
 
 // ========================= Event Listener =========================
 
@@ -63,17 +60,26 @@ $(document).ready(function(){
                     //this section should change the current text in each display, replacing it with the given string + response
                     $("#temperature-display").text = ("Temperature: " + response.main.temp);
                     $("#humidity-display").text = ("Humidity: " + response.main.humidity + " %");
-                    $("#wind-display").text = ("Wind Speed: " + response.wind.speed + "m/hour");
+                    $("#wind-display").text = ("Wind Speed: " + response.wind.speed + " m/hour");
+
                 });
             });
 
-            
 
-    var dayOne = document.getElementById("day-1");
-    var dayTwo = document.getElementById("day-2");
-    var dayThree = document.getElementById("day-3");
-    var dayFour = document.getElementById("day-4");
-    var dayFive = document.getElementById("day-5");
+            $("#search-button").on("click", function(){
+
+                $("#city-container").fadeIn(2000);
+                $("#five-day").toggle(3000);
+                // $(".day-container").fadeIn(1000);
+        
+                $("#day-1").toggle(3000);
+                $("#day-2").toggle(3000);
+                $("#day-3").toggle(3000);
+                $("#day-4").toggle(3000);
+                $("#day-5").toggle(3000);
+        });
+
+            
 
 // ========================= 5-Day Weather Forecast =========================
 
