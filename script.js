@@ -36,7 +36,15 @@
         var date = dayArray[day] + " " + daym + " " + monthArray[month] + " " + year //string display of complete date
 
         $("#current-date").text("Date: " + date);
+        
+        $("#day-1-date").text(month + "/" + "16" + "/" + year)
+        $("#day-2-date").text(month + "/" + "17" + "/" + year)
+        $("#day-3-date").text(month + "/" + "18" + "/" + year)
+        $("#day-4-date").text(month + "/" + "19" + "/" + year)
+        $("#day-5-date").text(month + "/" + "20" + "/" + year)
     };
+
+
 
 
 

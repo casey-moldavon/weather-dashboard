@@ -117,19 +117,19 @@ $("#search-button").on("click", function(){
         // list.weather.main
         console.log(response.list.weather);
         $("#day-1-temp").text("Temp: " + response.list[0].main.temp);
-        $("#day-1-humid").text("Temp: " + response.list[0].main.humidity);
+        $("#day-1-humid").text("Humidity: " + response.list[0].main.humidity);
 
         $("#day-2-temp").text("Temp: " + response.list[1].main.temp);
-        $("#day-2-humid").text("Temp: " + response.list[1].main.humidity);
+        $("#day-2-humid").text("Humidity: " + response.list[1].main.humidity);
 
         $("#day-3-temp").text("Temp: " + response.list[2].main.temp);
-        $("#day-3-humid").text("Temp: " + response.list[2].main.humidity);
+        $("#day-3-humid").text("Humidity: " + response.list[2].main.humidity);
 
         $("#day-4-temp").text("Temp: " + response.list[3].main.temp);
-        $("#day-4-humid").text("Temp: " + response.list[3].main.humidity);
+        $("#day-4-humid").text("Humidity: " + response.list[3].main.humidity);
 
         $("#day-5-temp").text("Temp: " + response.list[4].main.temp);
-        $("#day-5-humid").text("Temp: " + response.list[4].main.humidity);
+        $("#day-5-humid").text("Humidity: " + response.list[4].main.humidity);
 
 
 
