@@ -1,13 +1,43 @@
+// $(document).ready(function() {
+
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+                }
+        }
+        }
+        currentDate()
+    }
 
 
-var dayOne = document.getElementById("day-1");
-var dayTwo = document.getElementById("day-2");
-var dayThree = document.getElementById("day-3");
-var dayFour = document.getElementById("day-4");
-var dayFive = document.getElementById("day-5");
+    function currentDate(){
+    var mydate = new Date();
+    var year = mydate.getFullYear();
+        if(year < 1000){
+            year += 1900
+        }
+        var day = mydate.getDay();
+        var month = mydate.getMonth();
+        var daym = mydate.getDate();
+        var dayArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"];
+        var monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var date = dayArray[day] + " " + daym + " " + monthArray[month] + " " + year //string display of complete date
 
-var weatherIcon = document.querySelector(".weather-icon");
-var temperatureDisplay = document.querySelector(".temperature-display");
-var humidityDisplay = document.querySelector(".humidity-display");
-var windDisplay = document.querySelector(".wind-display");
-var uvDisplay = document.querySelector(".uv-display");
+        $("#current-date").text("Date: " + date);
+    };
+
+
+
+// });

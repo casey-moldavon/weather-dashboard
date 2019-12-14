@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard</title>
 
@@ -15,6 +15,7 @@
             background-size: 1500px 900px;
             background-color: #7c7c7c;}
     </style>
+
 
 </head>
 
@@ -34,24 +35,44 @@
     (represented as buttons? or maybe an event listener to detect when one is selected). -->
     <div class="container">
 
+
+        <!-- Self Note: include: search for city here -->
             <div class="search-container">
                 <input type="text" id="city-search" placeholder="Search by City here!">
                 <button type="button" id=search-button>Search</button>
 
-                <div id="past-display"></div> <!-- displays past searches -->
+
+                <!-- displays past searches -->
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Search History</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a id="drop1">City 1</a>
+                      <a id="drop2">City 2</a>
+                      <a id="drop3">City 3</a>
+                      <a id="drop4">City 4</a>
+                      <a id="drop5">City 5</a>
+                      <a id="drop6">City 6</a>
+                      <a id="drop7">City 7</a>
+                    </div>
+                  </div>
+
+
+                <!-- <div id="past-display"></div> -->
             </div>
 
             
             <!------------------------- City Forecast ------------------------->
 
             <div class="city-container" id="city-container">
-                <div class="weather-icon"><img src="">image placeholder</div>
 
+                <!-- <div id="city-name-display">City Name</div> -->
+                <div id="current-date">Current Date</div>
                 <div id="temperature-display">Temperature</div>
                 <div id="humidity-display">Humidity</div>
                 <div id="wind-display">Wind Speed</div>
                 <div id="uv-display">UV Index</div>
 
+                <div id="weather-icon"><img src="images/partlysunny.png"></div>
             </div>
 
     </div>
@@ -60,7 +81,7 @@
     <!------------------------- 5-Day Forecast ------------------------->
 
     <!-- this container holds all mini day containers -->
-    <div class="container">
+    <div class="container-two">
         <div class="main-day-container" id="main-day-container">
 
                 <div id="five-day">5-Day Forecast:</div>
@@ -68,46 +89,45 @@
 
                     <div class="day-container" id="day-1">
                         <div class="date" id="day-1-date">date 1 here</div>
-                        <img src="images/rain.png" class="temp-icon" id="day-1-icon">
+                        <img src="images/unknown.png" class="temp-icon" id="day-1-icon">
                         <div class="temp-display" id="day-1-temp">Temp:</div>
                         <div class="humid-display" id="day-1-humid">Humidity:</div>
                     </div>
 
                     <div class="day-container" id="day-2">
                         <div class="date" id="day-2-date">date here</div>
-                        <img src="images/rain.png" class="temp-icon" id="day-2-icon">
+                        <img src="images/unknown.png" class="temp-icon" id="day-2-icon">
                         <div class="temp-display" id="day-2-temp">Temp:</div>
                         <div class="humid-display" id="day-2-humid">Humidity:</div>
                     </div>
 
                     <div class="day-container" id="day-3">
                         <div class="date" id="day-3-date">date here</div>
-                        <img src="images/rain.png" class="temp-icon" id="day-3-icon">
+                        <img src="images/unknown.png" class="temp-icon" id="day-3-icon">
                         <div class="temp-display" id="day-3-temp">Temp:</div>
                         <div class="humid-display" id="day-3-humid">Humidity:</div>
                     </div>
 
                     <div class="day-container" id="day-4">
                         <div class="date" id="day-4-date">date here</div>
-                        <img src="images/rain.png" class="temp-icon" id="day-4-icon">
+                        <img src="images/unknown.png" class="temp-icon" id="day-4-icon">
                         <div class="temp-display" id="day-4-temp">Temp:</div>
                         <div class="humid-display" id="day-4-humid">Humidity:</div>
                     </div>
 
                     <div class="day-container" id="day-5">
                         <div class="date" id="day-5-date">date here</div>
-                        <img src="images/rain.png" class="temp-icon" id="day-5-icon">
+                        <img src="images/unknown.png" class="temp-icon" id="day-5-icon">
                         <div class="temp-display" id="day-5-temp">Temp:</div>
                         <div class="humid-display" id="day-5-humid">Humidity:</div>
                     </div>
                     </div>
 
-                
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
     <script src="weather.js"></script>
 </body>
 </html>

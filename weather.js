@@ -25,25 +25,9 @@ $(document).ready(function() {
 
 // ========================= API Stuffff =========================
 
-                //---------- Default ----------
-                // var apiKey = "ba40a3431591fcdcadbc808453fbbe64";
                 //---------- New Key ----------
                 var apiKey = "65875c478c483f7306d0ebe42d560f76";
 
-                // Tai's api key
-                // var apiKey = "4b8af4f937d691aa5fb93b6dd29ba04d"
-
-                //Oren's api key
-                // var apiKey = "31f4dd752a3e8b29f840df4abf0996cc";
-
-
-                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
-                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "json&APPID=" + apiKey;        
-                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "json&APPID=" + apiKey;
-                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "json&appid=" + apiKey;
-                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey;
-                // var currentQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + apiKey;
-                // var currentQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "us&mode=json&APPID=31f4dd752a3e8b29f840df4abf0996cc";
                 var currentQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&mode=json&APPID=" + apiKey;
     
                 $.ajax({
@@ -59,11 +43,41 @@ $(document).ready(function() {
                     // console.log(lat);
     
                     //this section should change the current text in each display, replacing it with the given string + response
-                    $("#temperature-display").text = ("Temperature: " + response.main.temp);
-                    $("#humidity-display").text = ("Humidity: " + response.main.humidity + " %");
-                    $("#wind-display").text = ("Wind Speed: " + response.wind.speed + " m/hour");
+
+                    // $("#city-name-display").text("City: " + response.name);
+                    $("#temperature-display").text("Temperature: " + response.main.temp);
+                    $("#humidity-display").text("Humidity: " + response.main.humidity + " %");
+                    $("#wind-display").text("Wind Speed: " + response.wind.speed + " m/hour");
+
+                    $(".weather-icon").text(response.weather.main);
+
+
+                    if (response.weather.main === "Clear") {
+                        $("#weather-icon").attr(scr = "images/sunny.png");
+                    };
+                    if (response.weather.main === "Clouds") {
+                        $("#weather-icon").attr("src", "images/partlycloudy.png");
+                    };
+                    if (response.weather.main === "Rain") {
+                        $("#weather-icon").attr("src", "images/rain.png");
+                    };
+                    if (response.weather.main === "Drizzle") {
+                        $("#weather-icon").attr("src", "images/sleet.png");
+                    };
+                    if (response.weather.main === "Snow") {
+                        $("#weather-icon").attr("src", "images/snow.png");
+                    };
+                    if (response.weather.main === "Thunderstorm") {
+                        $("#weather-icon").attr("src", "images/tstorms.png");
+                    };
+
 
                 });
+
+                localStorage.setItem("city", city);
+
+                $("#drop1").text(localStorage.getItem(city));
+
             });
 
 
@@ -80,46 +94,69 @@ $(document).ready(function() {
                 $("#day-5").toggle(3000);
         });
 
-            
+// ========================= Store city search and display in dropdown =========================
+          
 
 // ========================= 5-Day Weather Forecast =========================
 
-    // var weekQueryURL = "api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=" + apiKey;\
 
-    // $.ajax({
-    //     url: weekQueryURL,
-    //     method: "GET"
-    // })
-    // .then(function(response){
+$("#search-button").on("click", function(){
+    var city = $(this).attr("#city-search");
 
-    //     $list.weather.main
-    //     console.log(response.list.weather)
-    //     list.main.temp
-    //     list.main.humidity
+    var apiKey = "65875c478c483f7306d0ebe42d560f76";
+
+    var weekQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&mode=json&APPID=" + apiKey;
+
+
+    $.ajax({
+        url: weekQueryURL,
+        method: "GET"
+    })
+    .then(function(response){
+        console.log(response);
+        // list.weather.main
+        console.log(response.list.weather);
+        $("#day-1-temp").text("Temp: " + response.list[0].main.temp);
+        $("#day-1-humid").text("Temp: " + response.list[0].main.humidity);
+
+        $("#day-2-temp").text("Temp: " + response.list[1].main.temp);
+        $("#day-2-humid").text("Temp: " + response.list[1].main.humidity);
+
+        $("#day-3-temp").text("Temp: " + response.list[2].main.temp);
+        $("#day-3-humid").text("Temp: " + response.list[2].main.humidity);
+
+        $("#day-4-temp").text("Temp: " + response.list[3].main.temp);
+        $("#day-4-humid").text("Temp: " + response.list[3].main.humidity);
+
+        $("#day-5-temp").text("Temp: " + response.list[4].main.temp);
+        $("#day-5-humid").text("Temp: " + response.list[4].main.humidity);
+
 
 
 // ========================= Icon conditionals =========================
 
 
 // ------------------------- Day 1 -------------------------
-// if (response.list.weather.main === "Clear") {
-//     $("#day-1-icon").attr("src", images/sunny.png);
-// }
-// if (response.list.weather.main === "Clouds") {
-//     $("#day-1-icon").attr("src", images/partlycloudy.png);
-// }
-// if (response.list.weather.main === "Rain") {
-//     $("#day-1-icon").attr("src", images/rain.png);
-// }
-// if (response.list.weather.main === "Drizzle") {
-//     $("#day-1-icon").attr("src", images/sleet.png);
-// }
-// if (response.list.weather.main === "Snow") {
-//     $("#day-1-icon").attr("src", images/snow.png);
-// }
-// if (response.list.weather.main === "Thunderstorm") {
-//     $("#day-1-icon").attr("src", images/tstorms.png);
-// }
+if (response.list[0].weather.main === "Clear") {
+    $("#day-1-icon").attr("src", "images/sunny.png");
+}
+if (response.list[0].weather.main === "Clouds") {
+    $("#day-1-icon").attr("src", "images/partlycloudy.png");
+}
+if (response.list[0].weather.main === "Rain") {
+    $("#day-1-icon").attr("src", "images/rain.png");
+}
+if (response.list[0].weather.main === "Drizzle") {
+    $("#day-1-icon").attr("src", "images/sleet.png");
+}
+if (response.list[0].weather.main === "Snow") {
+    $("#day-1-icon").attr("src", "images/snow.png");
+}
+if (response.list[0].weather.main === "Thunderstorm") {
+    $("#day-1-icon").attr("src", "images/tstorms.png");
+}
+});
+});
 
 // ------------------------- Day 2 -------------------------
 // if (response.list.weather.main === "Clear") {
