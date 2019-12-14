@@ -42,18 +42,17 @@ bits and pieces of my soul...and these:​
 ​
 ## Deployed Link
 ​
-* [See Live Site](#)
+* [See Live Site](https://casey-moldavon.github.io/weather-dashboard/)
 ​
 ​
 ## Authors
 ​
 * **YOUR NAME** 
 ​
-- [Link to Portfolio Site](#)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/)
-​
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- [Link to Portfolio Site](https://casey-moldavon.github.io/weather-dashboard/)
+- [Link to Github(https://github.com/casey-moldavon/weather-dashboard)
+- [Link to LinkedIn](https://www.linkedin.com/in/casey-moldavon-442a1761/)
+
 ​
 ## License
 ​
@@ -61,6 +60,4 @@ This project is licensed under the MIT License
 ​
 ## Acknowledgments
 ​
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
+Big thanks to Tai Le as well as Oren Amema. Tai lent me a lot of assistance with this project and both of them were kind enough to send me API codes and walk through the homework with me (and vice-versa). I will say, i definitely learned a lot in this project. Even if it doesn't score a decent grade, i know i'll be walking away from this with a great deal more knowledge than what i started with.
